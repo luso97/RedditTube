@@ -1,0 +1,33 @@
+<div>
+   
+    <form [formGroup]="formRedd" (submit)="submit()">
+        <mat-form-field class="example-full-width" flex="100%"  appearance="outline">
+          <mat-label> What subreddit you want to create the playlist about?</mat-label>
+          <input matInput  placeholder="subreddit" formControlName="subreddit" required>
+        </mat-form-field>
+        <mat-form-field >
+            <mat-select formControlName="type" required>
+                <mat-option value="top">Top</mat-option>
+                <mat-option value="hot">Hot</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <mat-form-field >
+            <mat-select formControlName="time" required="top">
+                <mat-option value="all">All time</mat-option>
+                <mat-option value="year">Last year</mat-option>
+                <mat-option value="month">Last month</mat-option>
+                <mat-option value="week">Last week</mat-option>
+                <mat-option value="day">Last day</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <button mat-button type="submit" color="primary" flex="100%">Find</button>
+
+    </form>
+    <ng-container *ngIf="subreddit && urlVideo" class="center">
+        <mat-label>Subreddit cargado</mat-label>
+        Create playlist
+        <a href="{{urlVideo}}">Go to playlist</a>
+    </ng-container>
+
+    
+</div>
