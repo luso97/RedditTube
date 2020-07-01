@@ -19,5 +19,5 @@ from django.conf.urls import url
 from tube import views
 
 urlpatterns = [
-    url(r'^api/tutorials$', views.getUrls)
+    url(r'^api/urls$', views.getUrls)
 ]
