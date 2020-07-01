@@ -1,0 +1,6 @@
+[your-config]
+client_id='id'
+client_secret='secret'
+password='password'
+user_agent='RedditToPlaylist'
+username='user'
